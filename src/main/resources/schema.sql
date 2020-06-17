@@ -1,3 +1,6 @@
+DROP TABLE IF EXISTS project;
+DROP TABLE IF EXISTS sdlc_system;
+
 CREATE TABLE `sdlc_system` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `base_url` varchar(255) NOT NULL,
