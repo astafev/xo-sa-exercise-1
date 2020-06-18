@@ -29,7 +29,7 @@ public class Project {
     @Column(name = "name")
     private String name;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "sdlc_system_id")
     @NotNull
     private SdlcSystem sdlcSystem;
@@ -41,26 +41,4 @@ public class Project {
     @Column(name = "last_modified_date", nullable = false)
     @LastModifiedDate
     private Instant lastModifiedDate;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setSdlcSystem(SdlcSystem sdlcSystem) {
-        this.sdlcSystem = sdlcSystem;
-    }
-
-    @PrePersist
-    public void persist() {
-        System.out.println("persist");
-    }
-    @PreUpdate
-    public void update() {
-        System.out.println("update");
-    }
-
 }

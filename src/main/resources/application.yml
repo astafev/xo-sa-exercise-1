@@ -20,4 +20,4 @@ spring:
       basePath: /api/v2/
 logging:
   level:
-    root: debug
+    root: info
