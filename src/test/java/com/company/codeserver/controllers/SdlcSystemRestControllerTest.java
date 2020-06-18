@@ -43,7 +43,6 @@ class SdlcSystemRestControllerTest {
     @Test
     public void testCreateProject() throws Exception {
         Project project = new Project();
-        project.setId(null);
         project.setExternalId("testCreateProject");
         project.setName("testCreateProject");
         project.setSdlcSystem(new SdlcSystem() {{
